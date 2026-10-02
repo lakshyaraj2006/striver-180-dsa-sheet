@@ -1,0 +1,38 @@
+{
+	"DSA Setup": {
+		"scope": "cpp",
+		"prefix": "dsa",
+		"description": "General C++ DSA boilerplate with editable function signature and test cases",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"",
+			"class Solution {",
+			"public:",
+			"    ${5:int} ${1:${TM_FILENAME_BASE/(.*)/${1:/camelcase}/}}(${3}) {",
+			"        $4",
+			"    }",
+			"};",
+			"",
+			"int main() {",
+			"    ios::sync_with_stdio(false);",
+			"    cin.tie(nullptr);",
+			"",
+			"    int t;",
+			"    cin >> t;",
+			"",
+			"    while (t--) {",
+			"        ${2}",
+			"",
+			"        Solution sol;",
+			"        ${6:auto result = sol.${1}(${3});}",
+			"",
+			"        // Place your output code here",
+			"        ${7}",
+			"    }",
+			"",
+			"    return 0;",
+			"}"
+		]
+	}
+}
